@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加载动画</title>
+	<style>
+		body{
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.card{
+			width: 50px;
+			height: 50px;
+			position: relative;
+		}
+		.card .page{
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform-style: preserve-3d;
+			transform-origin: left;
+		}
+		.card .page::before, .card .page::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0px 50px 50px 0px;
+		}
+		.card .page::after{
+			border-radius: 50px 0px 0px 50px;
+		}
+		.card .page:nth-child(1){
+			animation: animation1 2s linear infinite;
+		}
+		.card .page:nth-child(2){
+			animation: animation2 2s linear infinite;
+		}
+		.card .page:nth-child(3){
+			animation: animation3 2s linear infinite;
+		}
+		.card .page:nth-child(4){
+			animation: animation4 2s linear infinite;
+		}
+		.card .page:nth-child(5){
+			animation: animation5 2s linear infinite;
+		}
+		.card .page:nth-child(1)::before{
+			background: aqua url("./images/star-right.png") center left/50% 50% no-repeat;
+		}
+		.card .page:nth-child(1)::after{
+			background: hotpink url("./images/compass-left.png") center right/50% 50% no-repeat;
+			transform: rotateY(180deg);
+		}
+		.card .page:nth-child(2)::before{
+			background: hotpink url("./images/compass-right.png") center left/50% 50% no-repeat;
+		}
+		.card .page:nth-child(2)::after{
+			background: coral url("./images/crown-left.png") center right/50% 50% no-repeat;
+			transform: rotateY(180deg);
+		}
+		.card .page:nth-child(3)::before{
+			background: coral url("./images/crown-right.png") center left/50% 50% no-repeat;
+		}
+		.card .page:nth-child(3)::after{
+			background: cyan url("./images/gift-left.png") center right/50% 50% no-repeat;
+			transform: rotateY(180deg);
+		}
+		.card .page:nth-child(4)::before{
+			background: cyan url("./images/gift-right.png") center left/50% 50% no-repeat;
+		}
+		.card .page:nth-child(4)::after{
+			background: yellowgreen url("./images/heart-left.png") center right/50% 50% no-repeat;
+			transform: rotateY(180deg);
+		}
+		.card .page:nth-child(5)::before{
+			background: yellowgreen url("./images/heart-right.png") center left/50% 50% no-repeat;
+		}
+		.card .page:nth-child(5)::after{
+			background: aqua url("./images/star-left.png") center right/50% 50% no-repeat;
+			transform: rotateY(180deg);
+		}
+
+		@keyframes animation1 {
+			0%{
+				z-index: 1;
+				transform: rotateY(180deg);
+			}
+			20%{
+				z-index: 1;
+				transform: rotateY(180deg);
+			}
+			40%{
+				z-index: 3;
+				transform: rotateY(360deg);
+			}
+			60%{
+				z-index: 4;
+				transform: rotateY(360deg);
+			}
+			60.0001%{
+				z-index: 4;
+				transform: rotateY(0deg);
+			}
+			80%{
+				z-index: 5;
+				transform: rotateY(0deg);
+			}
+			100%{
+				z-index: 4;
+				transform: rotateY(180deg);
+			}
+		}
+		@keyframes animation2 {
+			0%{
+				z-index: 5;
+				transform: rotateY(0deg);
+			}
+			20%{
+				z-index: 4;
+				transform: rotateY(180deg);
+			}
+			40%{
+				z-index: 1;
+				transform: rotateY(180deg);
+			}
+			60%{
+				z-index: 3;
+				transform: rotateY(360deg);
+			}
+			80%{
+				z-index: 4;
+				transform: rotateY(360deg);
+			}
+			100%{
+				z-index: 5;
+				transform: rotateY(360deg);
+			}
+		}
+		@keyframes animation3 {
+			0%{
+				z-index: 4;
+				transform: rotateY(0deg);
+			}
+			20%{
+				z-index: 5;
+				transform: rotateY(0deg);
+			}
+			40%{
+				z-index: 4;
+				transform: rotateY(180deg);
+			}
+			60%{
+				z-index: 1;
+				transform: rotateY(180deg);
+			}
+			80%{
+				z-index: 3;
+				transform: rotateY(360deg);
+			}
+			100%{
+				z-index: 4;
+				transform: rotateY(360deg);
+			}
+		}
+		@keyframes animation4 {
+			0%{
+				z-index: 3;
+				transform: rotateY(0deg);
+			}
+			20%{
+				z-index: 4;
+				transform: rotateY(0deg);
+			}
+			40%{
+				z-index: 5;
+				transform: rotateY(0deg);
+			}
+			60%{
+				z-index: 4;
+				transform: rotateY(180deg);
+			}
+			80%{
+				z-index: 1;
+				transform: rotateY(180deg);
+			}
+			100%{
+				z-index: 3;
+				transform: rotateY(360deg);
+			}
+		}
+		@keyframes animation5 {
+			0%{
+				z-index: 2;
+				transform: rotateY(0deg);
+			}
+			20%{
+				z-index: 3;
+				transform: rotateY(0deg);
+			}
+			40%{
+				z-index: 4;
+				transform: rotateY(0deg);
+			}
+			60%{
+				z-index: 5;
+				transform: rotateY(0deg);
+			}
+			80%{
+				z-index: 4;
+				transform: rotateY(180deg);
+			}
+			100%{
+				z-index: 1;
+				transform: rotateY(180deg);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="card">
+	<div class="page"></div>
+	<div class="page"></div>
+	<div class="page"></div>
+	<div class="page"></div>
+	<div class="page"></div>
+</div>
+</body>
+</html>
