@@ -15,7 +15,9 @@
 		.card{
 			width: 50px;
 			height: 50px;
+			opacity: 0;
 			position: relative;
+			animation: .5s all;
 		}
 		.card .page{
 			width: 50%;
@@ -234,4 +236,9 @@
 	<div class="page"></div>
 </div>
 </body>
+<script>
+	window.addEventListener('load', function () {
+		document.querySelector('.card').style.opacity = '1'
+	})
+</script>
 </html>
