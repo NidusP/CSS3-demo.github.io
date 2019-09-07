@@ -226,3 +226,74 @@ body{
         transform: rotateY(180deg);
     }
 }
+
+/* book-loading  */
+.book {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 8em;
+    height: 5em;
+    padding: .8em 0;
+    border: .1em solid var(--lineColor);
+    border-radius: .3em;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0;
+}
+.book::after{
+    content: "";
+    position: absolute;
+    left: calc(50% - .05em);
+    top: 0;
+    width: .1em;
+    height: 100%;
+    background-color: var(--lineColor);
+}
+.book .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.book .line {
+    width: 2.25em;
+    height: .1em;
+    background-color: var(--lineColor);
+    border-radius: .3em;
+    animation: move 2s infinite linear;
+    animation-delay: var(--d);
+}
+.book .line:nth-child(1) {
+    --d: 0s;
+}
+.book .line:nth-child(2) {
+    --d: .25s;
+}
+.book .line:nth-child(3) {
+    --d: .5s;
+}
+.book .item:nth-child(2) .line:nth-child(1) {
+    --d: .05s;
+}
+.book .item:nth-child(2)  .line:nth-child(2) {
+    --d: .3s;
+}
+.book .item:nth-child(2)  .line:nth-child(3) {
+    --d: .6s;
+}
+:root {
+    --lineColor: #d7d7d7
+}
+@keyframes move {
+    0%, 50%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100%, 0);
+    }
+    75% {
+        transform: translate(-100%, 0);
+    }
+}

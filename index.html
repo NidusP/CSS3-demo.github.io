@@ -34,9 +34,23 @@
 		</div>
 		<span id="progress"></span>
 	</div>
+	<div class="margin"></div>
+	<div class="book">
+		<div class="item">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
+		<div class="item">
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
+	</div>
 </body>
 <script>
 	const card = document.querySelector('.card')
+	const book = document.querySelector('.book')
 	const topCover = document.querySelector('.top-over')
 	const bottomShade = document.querySelector('.bottom-shade')
 	const progress = document.querySelector('#progress')
@@ -74,6 +88,7 @@
 	})
 	Promise.all([p1, p2]).then(function (results) {
 		card.style.opacity = '1'
+		book.style.opacity = '1'
 		console.log(results); // 获得一个Array: ['P1', 'P2']
 	});
 </script>
