@@ -20,7 +20,7 @@
 		<div class="page"></div>
 	</div>
 	<div class="margin"></div>
-	<div class="container loading">
+	<div class="container">
 		<div class="top">
 			<div class="top-over">
 				<div class="top-circle"></div>
@@ -33,6 +33,7 @@
 			<div class="bottom-shade"></div>
 		</div>
 		<span id="progress"></span>
+		<span class="loading">资源加载中...</span>
 	</div>
 	<div class="margin"></div>
 	<div class="book">
@@ -54,6 +55,7 @@
 	const topCover = document.querySelector('.top-over')
 	const bottomShade = document.querySelector('.bottom-shade')
 	const progress = document.querySelector('#progress')
+	const loading = document.querySelector('.loading')
 
 	let deg = 0
 	function running(){
@@ -69,6 +71,7 @@
 			topCover.style.transform = "rotate(0deg)";
 			bottomShade.style.transform = "rotate("+ (3.6*(50-deg)) +"deg)";
 		}
+		loading.style.filter = `opacity(${deg}%)`
 	}
 	setInterval(function(){
 		running();
@@ -77,6 +80,9 @@
 	// 	console.log('3 seconds passed');
 	// });
 
+
+
+	
 	let p1 = new Promise((resolve, reject) => {
 		window.addEventListener('load', function () {
 			resolve('资源加载完毕')
@@ -89,6 +95,10 @@
 	Promise.all([p1, p2]).then(function (results) {
 		card.style.opacity = '1'
 		book.style.opacity = '1'
+		loading.innerHTML = '资源加载完成...'
+		setTimeout(() => {
+			loading.style.display = 'none'
+		}, 20)
 		console.log(results); // 获得一个Array: ['P1', 'P2']
 	});
 </script>

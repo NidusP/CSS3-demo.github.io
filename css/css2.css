@@ -120,3 +120,12 @@
     color: white;
     background-color: #091d52;
 }
+.loading{
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    left: 0;
+    text-align: center;
+    color: whitesmoke;
+    filter: opacity(100%);
+}
