@@ -1,0 +1,122 @@
+.container{
+    width: 10em;
+    height: 10em;
+    overflow: hidden;
+    border: 1px solid white;
+    position: relative;
+}
+.top {
+    width: 10em;
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+}
+.bottom {
+    width: 10em;
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+}
+.top-over {
+    width: 10em;
+    height: 5em;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(180deg);
+    transform-origin: bottom center;
+}
+.top-over::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+}
+.top-over .top-circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10em;
+    height: 10em;
+    background-image: linear-gradient(to right, rgba(3, 249, 149, 0.5), transparent);
+    border-radius: 50%;
+    position: relative;
+}
+.top-over .top-circle::after{
+    position: absolute;
+    content: "";
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: #091d52;
+}
+
+
+.bottom-over {
+    width: 10em;
+    height: 5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transform: rotate(0deg);
+    transform-origin: top center;
+}
+.bottom-over::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+}
+.bottom-shade {
+    width: 10em;
+    height: 6em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+    transform-origin: top center;
+    background-color: #091d52;
+}
+.bottom-over .bottom-circle{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 10em;
+    height: 10em;
+    background-image: linear-gradient(to right, rgba(3, 249, 149, 0.5), rgba(3, 249, 149, 1));
+    border-radius: 50%;
+    position: relative;
+}
+.bottom-over .bottom-circle::after{
+    position: absolute;
+    content: "";
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: #091d52;
+}
+#progress{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #091d52;
+}

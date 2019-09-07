@@ -3,242 +3,78 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+	<meta name="author" content="https://github.com/NidusP"/>
+	<meta name="description" content="个人遇到过的一些CSS实现动画"/>
+	<meta name="keywords" content="CSS3, animation"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>加载动画</title>
-	<style>
-		body{
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.card{
-			width: 50px;
-			height: 50px;
-			opacity: 0;
-			position: relative;
-			animation: .5s all;
-		}
-		.card .page{
-			width: 50%;
-			height: 100%;
-			position: absolute;
-			left: 50%;
-			top: 0;
-			transform-style: preserve-3d;
-			transform-origin: left;
-		}
-		.card .page::before, .card .page::after{
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			border-radius: 0px 50px 50px 0px;
-		}
-		.card .page::after{
-			border-radius: 50px 0px 0px 50px;
-		}
-		.card .page:nth-child(1){
-			animation: animation1 2s linear infinite;
-		}
-		.card .page:nth-child(2){
-			animation: animation2 2s linear infinite;
-		}
-		.card .page:nth-child(3){
-			animation: animation3 2s linear infinite;
-		}
-		.card .page:nth-child(4){
-			animation: animation4 2s linear infinite;
-		}
-		.card .page:nth-child(5){
-			animation: animation5 2s linear infinite;
-		}
-		.card .page:nth-child(1)::before{
-			background: aqua url("./images/star-right.png") center left/50% 50% no-repeat;
-		}
-		.card .page:nth-child(1)::after{
-			background: hotpink url("./images/compass-left.png") center right/50% 50% no-repeat;
-			transform: rotateY(180deg);
-		}
-		.card .page:nth-child(2)::before{
-			background: hotpink url("./images/compass-right.png") center left/50% 50% no-repeat;
-		}
-		.card .page:nth-child(2)::after{
-			background: coral url("./images/crown-left.png") center right/50% 50% no-repeat;
-			transform: rotateY(180deg);
-		}
-		.card .page:nth-child(3)::before{
-			background: coral url("./images/crown-right.png") center left/50% 50% no-repeat;
-		}
-		.card .page:nth-child(3)::after{
-			background: cyan url("./images/gift-left.png") center right/50% 50% no-repeat;
-			transform: rotateY(180deg);
-		}
-		.card .page:nth-child(4)::before{
-			background: cyan url("./images/gift-right.png") center left/50% 50% no-repeat;
-		}
-		.card .page:nth-child(4)::after{
-			background: yellowgreen url("./images/heart-left.png") center right/50% 50% no-repeat;
-			transform: rotateY(180deg);
-		}
-		.card .page:nth-child(5)::before{
-			background: yellowgreen url("./images/heart-right.png") center left/50% 50% no-repeat;
-		}
-		.card .page:nth-child(5)::after{
-			background: aqua url("./images/star-left.png") center right/50% 50% no-repeat;
-			transform: rotateY(180deg);
-		}
-
-		@keyframes animation1 {
-			0%{
-				z-index: 1;
-				transform: rotateY(180deg);
-			}
-			20%{
-				z-index: 1;
-				transform: rotateY(180deg);
-			}
-			40%{
-				z-index: 3;
-				transform: rotateY(360deg);
-			}
-			60%{
-				z-index: 4;
-				transform: rotateY(360deg);
-			}
-			60.0001%{
-				z-index: 4;
-				transform: rotateY(0deg);
-			}
-			80%{
-				z-index: 5;
-				transform: rotateY(0deg);
-			}
-			100%{
-				z-index: 4;
-				transform: rotateY(180deg);
-			}
-		}
-		@keyframes animation2 {
-			0%{
-				z-index: 5;
-				transform: rotateY(0deg);
-			}
-			20%{
-				z-index: 4;
-				transform: rotateY(180deg);
-			}
-			40%{
-				z-index: 1;
-				transform: rotateY(180deg);
-			}
-			60%{
-				z-index: 3;
-				transform: rotateY(360deg);
-			}
-			80%{
-				z-index: 4;
-				transform: rotateY(360deg);
-			}
-			100%{
-				z-index: 5;
-				transform: rotateY(360deg);
-			}
-		}
-		@keyframes animation3 {
-			0%{
-				z-index: 4;
-				transform: rotateY(0deg);
-			}
-			20%{
-				z-index: 5;
-				transform: rotateY(0deg);
-			}
-			40%{
-				z-index: 4;
-				transform: rotateY(180deg);
-			}
-			60%{
-				z-index: 1;
-				transform: rotateY(180deg);
-			}
-			80%{
-				z-index: 3;
-				transform: rotateY(360deg);
-			}
-			100%{
-				z-index: 4;
-				transform: rotateY(360deg);
-			}
-		}
-		@keyframes animation4 {
-			0%{
-				z-index: 3;
-				transform: rotateY(0deg);
-			}
-			20%{
-				z-index: 4;
-				transform: rotateY(0deg);
-			}
-			40%{
-				z-index: 5;
-				transform: rotateY(0deg);
-			}
-			60%{
-				z-index: 4;
-				transform: rotateY(180deg);
-			}
-			80%{
-				z-index: 1;
-				transform: rotateY(180deg);
-			}
-			100%{
-				z-index: 3;
-				transform: rotateY(360deg);
-			}
-		}
-		@keyframes animation5 {
-			0%{
-				z-index: 2;
-				transform: rotateY(0deg);
-			}
-			20%{
-				z-index: 3;
-				transform: rotateY(0deg);
-			}
-			40%{
-				z-index: 4;
-				transform: rotateY(0deg);
-			}
-			60%{
-				z-index: 5;
-				transform: rotateY(0deg);
-			}
-			80%{
-				z-index: 4;
-				transform: rotateY(180deg);
-			}
-			100%{
-				z-index: 1;
-				transform: rotateY(180deg);
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="./css/css1.css">
+	<link rel="stylesheet" href="./css/css2.css">
 </head>
 <body>
-<div class="card">
-	<div class="page"></div>
-	<div class="page"></div>
-	<div class="page"></div>
-	<div class="page"></div>
-	<div class="page"></div>
-</div>
+	<div class="card">
+		<div class="page"></div>
+		<div class="page"></div>
+		<div class="page"></div>
+		<div class="page"></div>
+		<div class="page"></div>
+	</div>
+	<div class="margin"></div>
+	<div class="container loading">
+		<div class="top">
+			<div class="top-over">
+				<div class="top-circle"></div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="bottom-over">
+				<div class="bottom-circle"></div>
+			</div>
+			<div class="bottom-shade"></div>
+		</div>
+		<span id="progress"></span>
+	</div>
 </body>
 <script>
-	window.addEventListener('load', function () {
-		document.querySelector('.card').style.opacity = '1'
+	const card = document.querySelector('.card')
+	const topCover = document.querySelector('.top-over')
+	const bottomShade = document.querySelector('.bottom-shade')
+	const progress = document.querySelector('#progress')
+
+	let deg = 0
+	function running(){
+		deg = deg >= 100 ? 0 : deg+1;
+		progress.innerHTML = deg+"%"
+		rotate(deg)
+	}
+	function rotate(deg){
+		if(deg<=50){
+			topCover.style.transform = "rotate("+ (180-3.6*deg) +"deg)";
+			bottomShade.style.transform = "rotate(0deg)";
+		}else{
+			topCover.style.transform = "rotate(0deg)";
+			bottomShade.style.transform = "rotate("+ (3.6*(50-deg)) +"deg)";
+		}
+	}
+	setInterval(function(){
+		running();
+	}, 50)
+	// document.addEventListener('DOMContentLoaded',function(){
+	// 	console.log('3 seconds passed');
+	// });
+
+	let p1 = new Promise((resolve, reject) => {
+		window.addEventListener('load', function () {
+			resolve('资源加载完毕')
+		})
 	})
+
+	let p2 = new Promise((resolve, reject) => {
+		setTimeout(resolve, 5000, 'p2: 5s passed')
+	})
+	Promise.all([p1, p2]).then(function (results) {
+		card.style.opacity = '1'
+		console.log(results); // 获得一个Array: ['P1', 'P2']
+	});
 </script>
 </html>
