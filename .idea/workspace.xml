@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a78b16d0-66a1-4c54-b5ae-f3d8fe96c20b" name="Default Changelist" comment="">
+    <list default="true" id="a78b16d0-66a1-4c54-b5ae-f3d8fe96c20b" name="Default Changelist" comment="css shapes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,9 +25,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -35,7 +41,7 @@
     </key>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571125792659</updated>
       <workItem from="1571125795145" duration="20000" />
-      <workItem from="1587201939768" duration="413000" />
+      <workItem from="1587201939768" duration="2099000" />
     </task>
     <task id="LOCAL-00001" summary="css shapes">
       <created>1587202302531</created>
@@ -54,7 +60,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587202302531</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="css shapes">
+      <created>1587202392289</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587202392289</updated>
+    </task>
+    <task id="LOCAL-00003" summary="css shapes">
+      <created>1587202403270</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587202403270</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,9 +86,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="css shapes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1587202391606">
+    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587202835737">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1587202391606" />
+    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1587202835737" />
+    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1587202409362">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1587202409362" />
+    <state x="149" y="39" key="SettingsEditor" timestamp="1587203419367">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1587203419367" />
   </component>
 </project>
