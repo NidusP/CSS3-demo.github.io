@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a78b16d0-66a1-4c54-b5ae-f3d8fe96c20b" name="Default Changelist" comment="css shapes">
+    <list default="true" id="a78b16d0-66a1-4c54-b5ae-f3d8fe96c20b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,9 @@
       <option name="presentableId" value="Default" />
       <updated>1571125792659</updated>
       <workItem from="1571125795145" duration="20000" />
-      <workItem from="1587201939768" duration="2099000" />
+      <workItem from="1587201939768" duration="2221000" />
+      <workItem from="1587207558150" duration="7000" />
+      <workItem from="1587210341942" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="css shapes">
       <created>1587202302531</created>
@@ -74,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587202403270</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="css shapes">
+      <created>1587207480657</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587207480657</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,13 +99,13 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1587202835737" />
-    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1587202409362">
+    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1587207480374">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1587202409362" />
-    <state x="149" y="39" key="SettingsEditor" timestamp="1587203419367">
+    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1587207480374" />
+    <state x="149" y="39" key="SettingsEditor" timestamp="1587210369964">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1587203419367" />
+    <state x="149" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1587210369964" />
   </component>
 </project>
